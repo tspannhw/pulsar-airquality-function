@@ -18,17 +18,9 @@
 ## setup
 
 ````
+bin/pulsar-admin functions get --name AirQuality --namespace default --tenant public
 
-bin/pulsar-admin topics create persistent://public/default/aqdead
-bin/pulsar-admin topics create persistent://public/default/aqlog
-bin/pulsar-admin topics create persistent://public/default/airqualityglobal
-bin/pulsar-admin topics create persistent://public/default/aq-ozone
-bin/pulsar-admin topics create persistent://public/default/aq-pm25
-bin/pulsar-admin topics create persistent://public/default/aq-pm10
-
-bin/pulsar-admin functions get --name Energy --namespace default --tenant public
-
-bin/pulsar-admin functions status --name Energy --namespace default --tenant public
+bin/pulsar-admin functions status --name AirQuality --namespace default --tenant public
 
 bin/pulsar-client consume "persistent://public/default/aq-pm25" -s "fnpm25reader" -n 5
 bin/pulsar-client consume "persistent://public/default/aq-pm10" -s "fnpm10reader" -n 5
@@ -68,6 +60,7 @@ Using Java Function to clean up and split air quality readings sent from NiFi
 bin/pulsar-admin topics create persistent://public/default/aqdead
 bin/pulsar-admin topics create persistent://public/default/aqlog
 bin/pulsar-admin topics create persistent://public/default/airqualityglobal
+bin/pulsar-admin topics create persistent://public/default/airquality
 bin/pulsar-admin topics create persistent://public/default/aq-pm25
 bin/pulsar-admin topics create persistent://public/default/aq-pm10
 bin/pulsar-admin topics create persistent://public/default/aq-ozone
