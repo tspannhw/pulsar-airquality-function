@@ -81,4 +81,26 @@ bin/pulsar-client consume "persistent://public/default/aq-pm25" -s "aqpm25xr" -n
 bin/pulsar-client consume "persistent://public/default/aq-pm10" -s "aqpm10xr" -n 0
 bin/pulsar-client consume "persistent://public/default/aq-ozone" -s "aqozonexr" -n 0
 
+{
+  "numInstances" : 1,
+  "numRunning" : 1,
+  "instances" : [ {
+    "instanceId" : 0,
+    "status" : {
+      "running" : true,
+      "error" : "",
+      "numRestarts" : 0,
+      "numReceived" : 2157,
+      "numSuccessfullyProcessed" : 2157,
+      "numUserExceptions" : 0,
+      "latestUserExceptions" : [ ],
+      "numSystemExceptions" : 0,
+      "latestSystemExceptions" : [ ],
+      "averageLatency" : 3.7605293514140055,
+      "lastInvocationTime" : 1649508904507,
+      "workerId" : "c-standalone-fw-127.0.0.1-8080"
+    }
+  } ]
+}
+bin/pulsar-admin functions status --name AirQuality
 ````
