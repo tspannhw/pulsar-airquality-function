@@ -1,19 +1,18 @@
 package dev.pulsarfunction.airquality;
 
-import dev.pulsarfunction.airquality.AirQualityFunction;
-import org.apache.pulsar.common.functions.ConsumerConfig;
 import org.apache.pulsar.common.functions.FunctionConfig;
-import org.apache.pulsar.common.io.SourceConfig;
-import org.apache.pulsar.common.schema.SchemaType;
 import org.apache.pulsar.functions.LocalRunner;
-import org.junit.Assert;
-import org.junit.Test;
 import org.apache.pulsar.functions.api.Context;
+import org.junit.Test;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collection;
 
 import static org.mockito.Mockito.mock;
 
+/**
+ * testing
+ */
 public class AirQualityFunctionTest {
 
     protected Context ctx;
@@ -65,15 +64,16 @@ public class AirQualityFunctionTest {
     @Test
     public void testAirQualityFunction() {
         AirQualityFunction func = new AirQualityFunction();
-      //  func.process(JSON_STRING.getBytes(), mock(Context.class));
+
+        func.process(JSON_STRING.getBytes(), mock(Context.class));
 
         func.process(JSON_STRING_PM25.getBytes(), mock(Context.class));
 
-  //      func.process(JSON_STRING_O3.getBytes(), mock(Context.class));
+        func.process(JSON_STRING_O3.getBytes(), mock(Context.class));
 
         func.process(JSON_GLOBAL.getBytes(), mock(Context.class));
 
-//        func.process(JSON_GLOBAL_FAIL.getBytes(), mock(Context.class));
+        func.process(JSON_GLOBAL_FAIL.getBytes(), mock(Context.class));
     }
 
     /**

@@ -15,8 +15,8 @@ public class AirQualityFunction implements Function<byte[], Void> {
     public static final String LANGUAGE = "language";
     public static final String MESSAGE_JSON = "Receive message JSON:";
     public static final String ERROR = "ERROR:";
-    public static final String PERSISTENT_PUBLIC_DEFAULT_PM_25 = "persistent://public/default/aq-pm10";
-    public static final String PERSISTENT_PUBLIC_DEFAULT_PM_10 = "persistent://public/default/aq-pm25";
+    public static final String PERSISTENT_PUBLIC_DEFAULT_PM_25 = "persistent://public/default/aq-pm25";
+    public static final String PERSISTENT_PUBLIC_DEFAULT_PM_10 = "persistent://public/default/aq-pm10";
     public static final String PERSISTENT_PUBLIC_DEFAULT_O3 = "persistent://public/default/aq-ozone";
     public static final String PM_10 = "PM10";
 
